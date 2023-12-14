@@ -68,8 +68,8 @@
 .toggle+label .light::after {
   content: '';
   background-color: var(--toggle-fg);
-  -webkit-mask-image: url(./moon_fill.svg);
-  mask-image: url(./moon_fill.svg);
+  -webkit-mask-image: url(../moon_fill.svg);
+  mask-image: url(../moon_fill.svg);
   background-size: contain;
   width: 16px;
   height: 16px;
@@ -95,8 +95,8 @@
 .toggle+label .dark::after {
   content: '';
   background-color: var(--toggle-fg);
-  -webkit-mask-image: url(./sun_fill.svg);
-  mask-image: url(./sun_fill.svg);
+  -webkit-mask-image: url(../sun_fill.svg);
+  mask-image: url(../sun_fill.svg);
   width: 16px;
   height: 16px;
   -webkit-mask-size: contain;
