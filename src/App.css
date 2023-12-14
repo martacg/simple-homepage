@@ -172,8 +172,8 @@ ul li:first-child a {
 .requirements li::before {
   content: '';
   background-color: var(--check-fg);
-  -webkit-mask-image: url(done_ring_round_fill.svg);
-  mask-image: url(done_ring_round_fill.svg);
+  -webkit-mask-image: url(../done_ring_round_fill.svg);
+  mask-image: url(../done_ring_round_fill.svg);
   background-size: contain;
   width: 22px;
   height: 22px;
