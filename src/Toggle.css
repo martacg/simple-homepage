@@ -1,0 +1,120 @@
+.toggle-container {
+  position: relative;
+  display: block !important;
+  padding: 0 !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.toggle-content {
+  position: absolute;
+  top: 0;
+  right: 2em;
+  width: auto !important;
+
+
+  padding-top: 15px !important;
+  position: absolute;
+  right: 0;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--primary-text-color);
+
+  position: relative;
+}
+
+.toggle+label::before {
+  content: "";
+  height: 1em;
+  width: 2em;
+  border-radius: 1em;
+  background-color: var(--toggle-bg);
+  margin-right: 0.5em;
+  transition: background-color 250ms ease-in-out;
+}
+
+.toggle+label::after {
+  content: "";
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 1em;
+  position: absolute;
+  left: 0.2em;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+  background-color: var(--toggle-fg);
+
+}
+
+.toggle+label .light {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+
+}
+
+.toggle+label .light::after {
+  content: '';
+  background-color: var(--toggle-fg);
+  -webkit-mask-image: url(moon_fill.svg);
+  mask-image: url(moon_fill.svg);
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  position: absolute;
+  top: 5px;
+  right: -4px;
+  z-index: 2;
+
+}
+
+.toggle+label .dark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 16px;
+  top: 0px;
+
+}
+
+.toggle+label .dark::after {
+  content: '';
+  background-color: var(--toggle-fg);
+  -webkit-mask-image: url(sun_fill.svg);
+  mask-image: url(sun_fill.svg);
+  width: 16px;
+  height: 16px;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+}
+
+[data-theme="light"] .toggle+label .dark::after {
+  background-color: var(--toggle-bg);
+}
+
+[data-theme="dark"] .toggle+label .light::after {
+  background-color: var(--toggle-bg);
+}
+
+.toggle:checked+label::after {
+  transform: translateX(100%);
+}
